@@ -1,0 +1,585 @@
+/* 
+=================
+!= Global 
+=================
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --main-color: #8bc34a;
+    --secondry-color: #2c4755;
+    --padding: 60px;
+    --backcolor: #f6f6f6;
+    --color-txt: #777;
+    --margint: 100px;
+}
+
+* {
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    text-transform: capitalize;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+::selection {
+    background-color: #009688;
+    color: white;
+}
+
+.special-heading {
+    color: #ebeced;
+    font-size: 100px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+.special-heading + p {
+    color: #797979;
+    text-align: center;
+    font-size: 20px;
+    margin: -30px 0 0;
+}
+
+@media (max-width: 767px) {
+    .special-heading {
+        font-size: 60px;
+    }
+
+    .special-heading + p {
+        margin: -20px 0 0;
+    }
+}
+
+/* 
+=================
+!= Let's Stylee Header
+=================
+*/
+
+.header .bet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.header .logo {
+    width: 60px;
+}
+
+.header .links {
+    position: relative;
+    z-index: 100;
+}
+
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+.header .links .icon {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 30px;
+}
+
+.header .links .icon span{
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 4px;
+}
+
+.header .links .icon span:first-child {
+    width: 100%;
+}
+
+.header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: .3s;
+}
+
+.header .links .icon span:last-child {
+    width: 100%;
+}
+
+.header .links ul {
+    background: #f6f6f6;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    top: calc(100% + 15px);
+    min-width: 200px;
+    position: absolute;
+    display: none;
+    box-shadow: 0 3px 5px 0px #b5b5b5eb;
+}
+
+.header .links ul::before {
+    content: "";
+    border-style: solid;
+    border-width: 10px;
+    position: absolute;
+    border-color: transparent transparent #f6f6f6 transparent;
+    right: 5px;
+    top: -20px;
+}
+
+.header .links:hover ul {
+    display: block;
+}
+
+.header .links ul li a {
+    display: block;
+    padding: 15px;
+    color: #333;
+    transition: .3s;
+}
+
+.header .links ul li a:hover {
+    padding-left: 25px;
+    color: var(--main-color);
+}
+
+.header .links ul li:not(:last-child) a {
+    border-bottom: 2px solid #ddd;
+}
+
+/* 
+=================
+!= Let's Stylee Landing
+=================
+*/
+
+.landing {
+    background-image: url(../img/landing.jpg);
+    background-size: cover;
+    height: calc(100vh - 54px);
+    position: relative;
+}
+
+.landing .text-there {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+
+.landing .text-there h1 {
+    margin: 0;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.landing .text-there p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+/* 
+=================
+!= Let's Stylee Featuers
+=================
+*/
+
+.featuers {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    background-color: var(--backcolor);
+}
+
+.featuers .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+
+.featuers .feet {
+    padding: 20px;
+    text-align: center;
+}
+
+.featuers .feet i {
+    color: var(--main-color);
+}
+
+.featuers .feet h3 {
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.featuers .feet p {
+    line-height: 1.8;
+    font-size: 17px;
+    color: var(--color-txt);
+}
+
+/* 
+=================
+!= Let's Stylee Services
+=================
+*/
+
+.services {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+
+.services .service-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: var(--margint);
+}
+
+.services .service-content .srv {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+    .services .service-content .srv {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.services .service-content .srv i {
+    color: var(--main-color);
+    flex-basis: 60px;
+    font-size: 20px;
+}
+
+.services .service-content .srv .text {
+    flex: 1;
+}
+
+.services .service-content .srv .text h3 {
+    margin: 0 0 20px;
+}
+
+.services .service-content .srv .text p {
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--color-txt);
+}
+
+.services .service-content .img {
+    position: relative;
+    text-align: center;
+}
+
+.services .service-content .img::before {
+    content: "";
+    background-color: var(--secondry-color);
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 80px;
+    height: calc(100% + 100px);
+    z-index: -1;
+}
+
+.services .service-content .img img {
+    width: 260px;
+}
+
+@media (max-width: 1199px) {
+    .img-none {
+        display: none;
+    }
+}
+
+/* 
+=================
+!= Let's Stylee Services
+=================
+*/
+
+.portfolio {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    background-color: var(--backcolor);
+}
+
+.portfolio .portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: var(--margint);
+}
+
+.portfolio .portfolio-content .card {
+    background-color: white;
+    text-align: center;
+}
+
+.portfolio .portfolio-content .card img {
+    max-width: 100%;
+    filter: grayscale(0.5);
+    transition: .2s;
+    -webkit-filter: grayscale(0.5);
+}
+
+.portfolio .portfolio-content .card:hover img {
+    filter: grayscale(0);
+}
+
+.portfolio .portfolio-content .card .info {
+    padding: 20px;
+}
+
+.portfolio .portfolio-content .card h3 {
+    color: var(--main-color);
+    margin: 0;
+}
+
+.portfolio .portfolio-content .card p {
+    color: var(--color-txt);
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* 
+=================
+!= Let's Stylee About
+=================
+*/
+
+.about {
+    padding-top: var(--padding);
+    padding-bottom: calc(var(--padding) + 60px);
+}
+
+.about .about-content {
+    margin-top: var(--margint);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+    .about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.about .about-content .img {
+    width: 250px;
+    height: 375px;
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .about .about-content .img {
+        margin: 0 auto 60px;
+    }
+}
+
+.about .about-content .img::before {
+    content: "";
+    background-color: #ebeced;
+    position: absolute;
+    width: 100px;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: -20px;
+    z-index: -1
+}
+
+.about .about-content .img::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: calc(100% - 30%);
+    border-left: 80px solid var(--main-color);
+    border-bottom: 80px solid var(--main-color);
+    right: -150px;
+    top: -40px;
+    z-index: -1;
+}
+
+@media (max-width: 991px) {
+    .about .about-content .img::before,
+    .about .about-content .img::after {
+        display: none;
+    }
+}
+
+.about .about-content .img img {
+    width: 100%;
+    filter: grayscale(1);
+    transition: .2s;
+}
+
+.about .about-content .img img:hover {
+    filter: grayscale(0);
+}
+
+.about .about-content .text {
+    flex-basis: calc(100% - 500px);
+}
+
+.about .about-content .text p:first-of-type {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+
+.about .about-content .text p:last-of-type {
+    color: var(--color-txt);
+    font-weight: 300;
+    line-height: 2;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.about .about-content .text hr {
+    width: 50%;
+    border-color: var(--main-color);
+    display: inline-block;
+}
+
+/* 
+=================
+!= Let's Stylee Contact
+=================
+*/
+
+.contact {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    background-color: var(--backcolor);
+}
+
+.contact .info {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    text-align: center;
+}
+
+.contact .info .lable {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--secondry-color);
+}
+
+.contact .info a {
+    text-transform: none;
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--main-color);
+    display: block;
+}
+
+.contact .info .social {
+    font-size: 16px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact .info .social i {
+    margin-left: 10px;
+    color: var(--secondry-color);
+}
+
+@media (max-width: 767px) {
+    .contact .info .lable {
+        font-size: 20px;
+    }
+
+    .contact .info a {
+        font-size: 17px;
+    }
+
+    .contact .info .social {
+        font-size: 12px;
+    }
+}
+
+/* 
+=================
+!= Let's Stylee Footer
+=================
+*/
+
+.footter {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--secondry-color);
+    color: white;
+}
+
+.footter .text {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footter .text span {
+    color: var(--main-color);
+}
+
+
+/* 
+=================
+!= Responsiv Media
+=================
+*/
+
+/* Small */
+
+@media (min-width: 560px) {
+    .container {
+        width: 540px;
+    }
+}
+
+/* Mediem */
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Large */
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* XLarge */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
