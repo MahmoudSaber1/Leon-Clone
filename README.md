@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> Leon Clone is a Practical Site to Use HTML & CSS in Real Design With Fully Responsive
+> Leon Template Clone is a Practical Site to Use HTML & CSS in Real Design With Fully Responsive
 
 ## Screenshot & Performance
 ![leonDesign](https://user-images.githubusercontent.com/67934444/207254418-01824b30-d006-4231-9f9d-007b81ad3c32.png)
